@@ -33,6 +33,13 @@ public class TestCityList {
 
 
     }
+    @Test
+    public void deleteCityTest() {
+        City edmonton = new City("Edmonton", "AB");
+        list.addCity(edmonton);
+        assertFalse(list.hasCity(edmonton));
+        // should not work
+    }
 
     private void assertEquals(int count, int i) {
     }

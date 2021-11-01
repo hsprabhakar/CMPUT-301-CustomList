@@ -40,6 +40,19 @@ public class CustomList extends ArrayAdapter<City> {
         return false;
     }
 
+    public boolean deleteCity(City city) {
+        if (!cities.contains(city)) {
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
+        return true;
+    }
+
+    public int countCities() {
+        return cities.size();
+
+    }
+
     private CustomList list;
 //    @Before
 //    public void createList(){
