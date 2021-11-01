@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 // import org.junit.jupiter.api.Test;
 import com.example.simpleparadox.listycity.City;
@@ -36,11 +37,24 @@ public class TestCityList {
     @Test
     public void deleteCityTest() {
         City edmonton = new City("Edmonton", "AB");
-        list.addCity(edmonton);
+        City calgary = new City("Calgary", "AB");
+
+        list.addCity(calgary);
+        list.deleteCity(edmonton);
         assertFalse(list.hasCity(edmonton));
         // should not work
     }
 
+    @Test
+    public void countCityTest() {
+        City edmonton = new City("Edmonton", "AB");
+        City calgary = new City("Calgary", "AB");
+
+        list.addCity(edmonton);
+        list.addCity(calgary);
+        assertNotEquals(list.countCities(), 3);
+        // should not work
+    }
     private void assertEquals(int count, int i) {
     }
 
