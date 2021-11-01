@@ -1,10 +1,10 @@
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.junit.jupiter.api.Test;
+// import org.junit.jupiter.api.Test;
 import com.example.simpleparadox.listycity.City;
 import com.example.simpleparadox.listycity.CustomList;
 import com.example.simpleparadox.listycity.MainActivity;
-
+import org.junit.Test;
 import org.junit.Before;
 
 import java.util.ArrayList;
@@ -26,7 +26,9 @@ public class TestCityList {
 
     @Test
     public void hasCityTest() {
-        assertFalse(list.hasCity(new City("Edmonton", "AB")));
+        list.clear();
+        City edmonton = new City("Edmonton", "AB");
+        assertTrue(list.hasCity(edmonton));
         // should not work above
 
 
