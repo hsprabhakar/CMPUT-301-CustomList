@@ -24,6 +24,29 @@ public class CustomList extends ArrayAdapter<City> {
         this.cities = cities;
         this.context = context;
     }
+    public int getCount(){
+        return cities.size();
+    }
+
+    public void addCity(City city){
+        return;
+    }
+
+    private CustomList list;
+//    @Before
+//    public void createList(){
+//        list = new CustomList(null, new ArrayList<City>());
+//    }
+//
+//    @Test
+//    public void addCityTest(){
+//        int listSize = list.getCount();
+//        list.addCity(new City("Halifax", "NS"));
+//        assertEquals(list.getCount(), listSize+1);
+//    }
+//
+//    private void assertEquals(int count, int i) {
+//    }
 
 
     @NonNull
