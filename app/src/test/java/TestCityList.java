@@ -1,3 +1,5 @@
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.example.simpleparadox.listycity.City;
 import com.example.simpleparadox.listycity.CustomList;
 import com.example.simpleparadox.listycity.MainActivity;
@@ -20,6 +22,14 @@ public class TestCityList {
         int listSize = list.getCount();
         list.addCity(new City("Halifax", "NS"));
         assertEquals(list.getCount(), listSize+1);
+    }
+
+    @Test
+    public void hasCityTest() {
+        assertTrue(list.hasCity(new City("Edmonton", "AB")));
+        // should not work above
+
+
     }
 
     private void assertEquals(int count, int i) {
